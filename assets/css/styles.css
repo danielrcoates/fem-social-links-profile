@@ -1,0 +1,135 @@
+/* inter-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/assets/fonts/inter-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/assets/fonts/inter-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+    --c-grey-700: hsl(0, 0%, 20%);
+    --c-grey-800: hsl(0, 0%, 12%);
+    --c-grey-900: hsl(0, 0%, 8%);
+    --c-green: hsl(75, 94%, 57%);
+    --c-white: hsl(0, 0%, 100%);
+
+    --spacing-50:  0.25rem;
+    --spacing-100: 0.5rem; 
+    --spacing-150: 0.75rem;
+    --spacing-200: 1rem;
+    --spacing-300: 1.5rem;
+    --spacing-500: 2.5rem;
+
+    --ff-primary: 'Inter', Arial, Helvetica, sans-serif;
+
+    --fs-heading-size: 1.5rem;
+    --fs-content-size: 0.875rem;
+
+}
+
+
+/* Boilerplate Styles */
+*, *:before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--c-grey-900);
+    
+    color: var(--c-white);
+    font-family: var(--ff-primary);
+    line-height: 1.5;
+    letter-spacing: 0px;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+a {
+    color: var(--c-white);
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+nav ul, li {
+    display: grid;
+    gap: 12px;
+
+    width: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.button {
+    background-color: var(--c-grey-700);
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.button:hover, :focus {
+    background-color: var(--c-green);
+    color: var(--c-grey-900);
+}
+
+.profile {
+    display: grid;
+    gap: 12px;
+    gap: var(--spacing-300);
+    background-color: var(--c-grey-800);
+    border-radius: 12px;
+    margin: var(--spacing-300);
+    padding: var(--spacing-300);
+    justify-items: center;
+}
+
+.profile__picture {
+    height: 88px;
+    width: 88px;
+    border-radius: 100vh;
+}
+
+.profile__information {
+    font-weight: 700;
+    text-align: center;
+    
+    h1 {
+        font-size: var(--fs-heading-size);
+    }
+
+    p {
+        color: var(--c-green);
+    }
+}
+
+.profile__quote {
+    font-weight: 400;
+    font-size: var(--fs-content-size);
+}
